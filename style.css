@@ -1,0 +1,548 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  margin: 0;
+  padding: 0;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.col {
+  flex-basis: 0;
+  flex-grow: 1;
+  max-width: 100%;
+  height: 100vh;
+}
+
+.main-image {
+  background: url("/assets/images/main-bg.jpg");
+  position: absolute;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.first-content {
+  position: absolute;
+  width: 494px;
+  height: 123px;
+  left: 120px;
+  top: 96px;
+
+  /* Heading/4 */
+
+  font-family: "ITC Avant Garde Gothic Pro";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 31.25px;
+  line-height: 130%;
+  /* or 41px */
+
+  display: flex;
+  align-items: flex-end;
+
+  /* Typography/Primary */
+
+  color: #000000;
+}
+
+.second-content {
+  position: absolute;
+  width: 432px;
+  height: 52px;
+  left: 120px;
+  top: 231px;
+
+  /* Body/Body */
+
+  font-family: "Avenir";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  /* or 26px */
+
+  /* Typography/Body */
+
+  color: #666666;
+}
+
+.link-button {
+  /* Button */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 10px;
+
+  position: absolute;
+  width: 146px;
+  height: 23px;
+  left: 120px;
+  top: 315px;
+}
+
+.link-button .content {
+  /* Content */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  gap: 5px;
+
+  width: 146px;
+  height: 23px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.link-button .text-button {
+  /* text-button */
+
+  width: 146px;
+  height: 17px;
+
+  /* Button/Text Link Mobile */
+
+  font-family: "Avenir";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 12.8px;
+  line-height: 17px;
+  display: flex;
+  align-items: center;
+  text-transform: capitalize;
+
+  /* Buttons/Primary */
+
+  color: #000000;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.link-button .rectangle {
+  /* Rectangle 299 */
+
+  width: 146px;
+  height: 1px;
+
+  /* Background/Dark */
+
+  background: #000000;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
+
+.scroll {
+  position: absolute;
+  top: 406px;
+  right: 0;
+  left: 0px;
+  width: 100%;
+  height: 363px;
+}
+
+.cards {
+  padding-left: 120px;
+  overflow: hidden;
+  align-items: stretch;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+}
+
+.cards::-webkit-scrollbar {
+  display: none;
+}
+
+.product-card {
+  width: 230px;
+  height: 363px;
+
+  margin-right: 32px;
+
+  flex-basis: 33.333%;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.product-card .card-image {
+  width: 230px;
+  height: 310px;
+}
+
+.card-image-product-1 {
+  background: url("assets/images/product-1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.card-image-product-2 {
+  background: url("assets/images/product-2.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.card-image-product-3 {
+  background: url("assets/images/product-3.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.product-card .card-name {
+  display: block;
+  width: 230px;
+  height: 20px;
+
+  margin-top: 12px;
+
+  /* Body/Body Mobile */
+
+  font-family: "Avenir";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12.8px;
+  line-height: 160%;
+  /* or 20px */
+
+  /* Typography/Primary */
+
+  color: #000000;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.product-card .card-footer {
+  /* Auto layout */
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+  gap: 12px;
+
+  width: 230px;
+  height: 20px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.product-card .card-footer .price {
+  /* Body/Body Bold Mobile */
+  width: 40;
+  height: 20;
+
+  font-family: "Avenir";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12.8px;
+  line-height: 160%;
+  /* or 20px */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  /* Typography/Primary */
+
+  color: #000000;
+}
+
+.product-card .card-footer .color-options {
+  display: flex;
+  justify-content: space-between;
+
+  width: 72px;
+  height: 12px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.product-card .card-footer .color-options .color-option {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.card-next-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 135px;
+  right: 48px;
+}
+
+@media screen and (max-width: 1020px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .main-image {
+    width: 360px;
+    height: 437px;
+  }
+
+  .first-content {
+    width: 312px;
+    height: 78px;
+    left: 24px;
+    top: 248px;
+
+    /* Heading/4 Mobile */
+
+    font-size: 20px;
+
+    /* or 26px */
+    /* or 41px */
+
+    /* Typography / White */
+
+    color: #ffffff;
+  }
+
+  .second-content {
+    display: none;
+  }
+
+  .link-button {
+    /* Button */
+
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 10px;
+
+    position: absolute;
+    width: 146px;
+    height: 23px;
+    left: 24px;
+    top: 342px;
+  }
+
+  .link-button .content {
+    /* Content */
+
+    /* Auto layout */
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 5px;
+
+    width: 146px;
+    height: 23px;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+
+  .link-button .text-button {
+    /* text-button */
+
+    width: 146px;
+    height: 17px;
+
+    /* Button/Text Link Mobile */
+
+    font-family: "Avenir";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 12.8px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+
+    /* Typography / White */
+
+    color: #ffffff;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+
+  .link-button .rectangle {
+    /* Rectangle 299 */
+
+    width: 146px;
+    height: 1px;
+
+    /* Typography / White */
+
+    background: #ffffff;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+  }
+
+  .scroll {
+    position: absolute;
+    width: 360px;
+    height: 293px;
+    left: 0px;
+    top: 397px;
+  }
+
+  .cards {
+    padding-left: 24px;
+    overflow-x: scroll;
+    padding-bottom: 10px;
+  }
+
+  .product-card {
+    width: 148px;
+    height: 293px;
+
+    margin-right: 12px;
+
+    flex-basis: 33.333%;
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+
+  .product-card .card-image {
+    width: 148px;
+    height: 200px;
+  }
+
+  .product-card .card-name {
+    width: 149px;
+    height: 40px;
+
+    margin-top: 8px;
+
+    /* Body/Body Mobile */
+
+    font-family: "Avenir";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12.8px;
+    line-height: 160%;
+    /* or 20px */
+
+    /* Typography/Primary */
+
+    color: #000000;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+
+  .product-card .card-footer {
+    /* Auto layout */
+    position: relative;
+    display: block;
+    margin-top: 4px;
+
+    width: 149px;
+    height: 40px;
+    /* Inside auto layout */
+
+    flex: none;
+  }
+
+  .product-card .card-footer .price {
+    /* Body/Body Bold Mobile */
+    width: 40px;
+    height: 20px;
+
+    font-family: "Avenir";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12.8px;
+    line-height: 160%;
+    /* or 20px */
+
+    display: block;
+    text-align: left;
+
+    /* Typography/Primary */
+
+    color: #000000;
+  }
+
+  .product-card .card-footer .color-options {
+    display: flex;
+    justify-content: space-between;
+
+    width: 72px;
+    height: 12px;
+
+    /* Inside auto layout */
+
+    flex: none;
+
+    margin-top: 8px;
+  }
+
+  .card-next-btn {
+    display: none;
+  }
+}

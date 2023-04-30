@@ -1,0 +1,12 @@
+@font-face {
+    font-family: "ITC Avant Garde Gothic Pro";
+    src: url("/assets/font/ITCAvantGardePro-Bk.otf");
+    src: url("/assets/font/ITCAvantGardePro-Bold.otf");
+    src: url("/assets/font/ITCAvantGardePro-Demi.otf");
+    src: url("/assets/font/ITCAvantGardePro-Md.otf");
+  }
+
+  @font-face {
+    font-family: "Avenir";
+    src: url("/assets/font/Avenir.ttc");
+  }
